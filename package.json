@@ -19,7 +19,8 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "tool-summary": "tsx src/utils/analyzeTools.ts",
     "tool-summary:langchain": "tsx src/utils/analyzeTools.ts --langchain",
-    "check-tool-names:langchain": "tsx scripts/check-langchain-tool-duplicates.ts"
+    "check-tool-names:langchain": "tsx scripts/check-langchain-tool-duplicates.ts",
+    "start-api": "tsx src/api/start.ts"
   },
   "engines": {
     "node": ">=22.0.0",
@@ -56,10 +57,16 @@
     "bn.js": "^5.2.1",
     "bs58": "^6.0.0",
     "chai": "^5.1.2",
+    "cors": "^2.8.5",
     "decimal.js": "^10.4.3",
     "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^8.0.0",
     "langchain": "^0.3.8",
     "openai": "^4.77.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "tiktoken": "^1.0.18",
     "typedoc": "^0.27.6",
     "zod": "^3.24.1"
@@ -67,7 +74,11 @@
   "devDependencies": {
     "@types/bn.js": "^5.1.6",
     "@types/chai": "^5.0.1",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
     "@types/node": "^22.10.2",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
     "@typescript-eslint/eslint-plugin": "^8.18.2",
     "@typescript-eslint/parser": "^8.18.2",
     "eslint": "^8.56.0",
